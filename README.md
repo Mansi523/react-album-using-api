@@ -67,7 +67,7 @@ Follow these steps to run the React Album App locally:
 ### DEMO
 
  - https://drop-down-33b95.web.app
-
+ 
 ## Acknowledgments
 
 - This project was created as a sample application for educational purposes.
