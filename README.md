@@ -62,11 +62,11 @@ Follow these steps to run the React Album App locally:
 # Mansi Kumari
 
 ### LANDING PAGE
-<a href="https://drop-down-33b95.web.app"><img src="https://i.ibb.co/qYtzyrw/Screenshot-26.png" alt="Screenshot-26" /></a>
+
 
 ### DEMO
 
- - https://drop-down-33b95.web.app
+ - 
  
 ## Acknowledgments
 
