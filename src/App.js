@@ -190,9 +190,7 @@ sethandleSearch(fliterasearch);
     handleUpdate={ handleUpdate}
     search={search}
  />
- 
- 
- 
+
     <ToastContainer />
     </section>
   
@@ -201,3 +199,6 @@ sethandleSearch(fliterasearch);
 }
 
 export default App;
+
+
+
