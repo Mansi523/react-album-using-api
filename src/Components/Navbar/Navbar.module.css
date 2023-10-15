@@ -78,6 +78,7 @@ ul {
 }
 ul .searchindividual {
   padding: 5px;
+  cursor: pointer;
 }
 /* for the notification icon of the navbar */
 .notificationIcon {

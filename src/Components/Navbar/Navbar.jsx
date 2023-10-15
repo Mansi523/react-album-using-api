@@ -3,20 +3,16 @@ import { IoNotifications } from "react-icons/io5";
 import { PiGooglePhotosLogoFill } from "react-icons/pi";
 import style from "../Navbar/Navbar.module.css";
 import { useState, useEffect } from "react";
-const Navbar = ({ length, handleSearch, search, album, albumname }) => {
+const Navbar = ({ length, handleSearch, search,handleSearchDisplay}) => {
   const [suggestionDispay, setsuggestionDispay] = useState(false);
-  // console.log(length);
+  
   useEffect(() => {
     if (search.length > 0) {
       setsuggestionDispay(true);
     }
   }, [search]);
 
-  let testvar = {};
-  const test = () => {
-    testvar = album.find((item) => item.id == albumname.id);
-  };
-  test();
+ 
 
   document.addEventListener("click", (e) => {
     if (e.target.id !== "suggestionbox" && e.target.id !== "inputValue") {
@@ -51,7 +47,7 @@ const Navbar = ({ length, handleSearch, search, album, albumname }) => {
             <div id="suggestionbox" className={style.searchfilter}>
               <ul>
                 {search.map((item, index) => (
-                  <li className={style.searchindividual} key={index}>
+                  <li className={style.searchindividual} key={index} onClick={()=>{handleSearchDisplay(item)}}>
                     {item.title}
                   </li>
                 ))}

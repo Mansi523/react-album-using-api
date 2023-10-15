@@ -3,6 +3,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Form from "./Components/AddAlbum/Form";
 import AddAlbum from "./Components/AddAlbum/AddAlbum";
 import AlbumList from "./Components/Albumlist/AlbumList";
+import Loader from "./Components/Loader/Loader";
 // imported useSatate and useEffect from react
 import { useState,useEffect} from "react";
 
@@ -16,9 +17,8 @@ function App() {
   const[name,setname] = useState("");
   const[album,setalbum] = useState([]);
   const[search,sethandleSearch] = useState([]);
-  const[albumname,setalbumname]=useState({});
   const[update,setupdate] =useState(null);
-  
+  const[loader,setloader] =useState(false);
   // function for handling clear function
   const handleClear=()=>{
       setname("");
@@ -38,6 +38,7 @@ function App() {
     }
 
     try{
+      
       const data = await fetch("https://jsonplaceholder.typicode.com/albums",{
         method: 'POST',
         body: JSON.stringify(album_name),
@@ -64,12 +65,16 @@ useEffect(()=>{
 
  const album_data = async()=>{
 try{
+  setloader(true);
  const data = await fetch("https://jsonplaceholder.typicode.com/albums"); 
    const album = await data.json();
    console.log("album",album);
     setalbum(album);
+    setloader(false);
  }catch(err){
-    console.log(err);
+  setloader(false);  
+  console.log(err);
+  toast("Something went wrong!");  
  }
 
 }
@@ -156,18 +161,25 @@ console.log(fliterasearch)
 sethandleSearch(fliterasearch);
 }  
 
+// Search handle Display function
 
+const handleSearchDisplay =(item)=>{
+    console.log(item);
+    sethandleSearch([item]);
+  }
 
   return (
     <div>
-    
+      {
+        loader?<Loader/>:
+     <>
    <Navbar
     length={album.length}
     handleSearch = {handleSearch}
     search={search}
-    album={album}
-    albumname={albumname}
+    handleSearchDisplay={handleSearchDisplay}
    />
+  
     <section style ={{width:"70%",margin:"auto"}}>
     {isbtn && <Form
                name = {name}
@@ -193,7 +205,8 @@ sethandleSearch(fliterasearch);
 
     <ToastContainer />
     </section>
-  
+    </>
+  }
     </div>
   );
 }
