@@ -69,7 +69,7 @@ Follow these steps to run the React Album App locally:
  
 ### SEARCHBAR 
 
-<a href="https://react-album-850fa.web.app/"><img src="https://i.ibb.co/X5bKqVC/Searchbar-feature.png" alt="Searchbar-feature"/></a>
+<a href="https://react-album-850fa.web.app/"><img src="https://i.ibb.co/98pJWsW/Searchbar-feature-1.png" alt="Searchbar-feature-1" /></a>
 
 ### DEMO
 
