@@ -62,11 +62,18 @@ Follow these steps to run the React Album App locally:
 # Mansi Kumari
 
 ### LANDING PAGE
+<a href="https://react-album-850fa.web.app/"><img src="https://i.ibb.co/4YLBYps/landing-page.png" alt="landing-page"/></a>
 
+### CREATE-ALBUM PAGE 
+<a href="https://react-album-850fa.web.app/"><img src="https://i.ibb.co/DLN9jms/creating-album.png" alt="creating-album"/></a>
+ 
+### SEARCHBAR 
+
+<a href="https://react-album-850fa.web.app/"><img src="https://i.ibb.co/X5bKqVC/Searchbar-feature.png" alt="Searchbar-feature"/></a>
 
 ### DEMO
 
- - 
+ - https://react-album-850fa.web.app/
  
 ## Acknowledgments
 
