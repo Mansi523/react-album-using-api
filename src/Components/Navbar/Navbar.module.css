@@ -127,6 +127,9 @@ ul .searchindividual {
     text-align: center;
     font-size:0.5rem;
   }
+  .searchfilter{
+    width:150px;
+  }
 }
 
 @media screen and (max-width: 365px) {
@@ -141,5 +144,8 @@ ul .searchindividual {
   .imgIcon img {
     height: 35px;
     width: 35px;
+  }
+  .searchfilter{
+    width:120px;
   }
 }

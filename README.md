@@ -73,7 +73,7 @@ Follow these steps to run the React Album App locally:
 
 ### DEMO
 
- - https://react-album-850fa.web.app/
+ - https://react-album-850fa.web.app
  
 ## Acknowledgments
 
