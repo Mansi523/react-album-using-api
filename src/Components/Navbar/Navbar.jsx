@@ -5,7 +5,7 @@ import style from "../Navbar/Navbar.module.css";
 import { useState, useEffect } from "react";
 const Navbar = ({ length, handleSearch, search,handleSearchDisplay}) => {
   const [suggestionDispay, setsuggestionDispay] = useState(false);
-  
+  // useEffect function for the search bar
   useEffect(() => {
     if (search.length > 0) {
       setsuggestionDispay(true);
@@ -13,7 +13,7 @@ const Navbar = ({ length, handleSearch, search,handleSearchDisplay}) => {
   }, [search]);
 
  
-
+// hiding the search bar feature when click outside
   document.addEventListener("click", (e) => {
     if (e.target.id !== "suggestionbox" && e.target.id !== "inputValue") {
       setsuggestionDispay(false);

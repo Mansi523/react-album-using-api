@@ -6,7 +6,7 @@ const AlbumList = (
     {album,handleDelete,handleUpdate,search}
     
     ) => {
-
+// for the search bar feature
   let data = [];
    if(search.length>0){
        data = search || album;
